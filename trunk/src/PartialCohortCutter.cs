@@ -125,5 +125,21 @@ namespace Landis.Library.BiomassHarvest
                                 cohort.Biomass,
                                 reduction);
         }
+        //---------------------------------------------------------------------
+        int IDisturbance.ChangeForage(ICohort cohort)
+        {
+            return 0;
+        }
+        //---------------------------------------------------------------------
+        int IDisturbance.ChangeForageInReach(ICohort cohort)
+        {
+                return 0;
+        }
+        //---------------------------------------------------------------------
+        double IDisturbance.ChangeLastBrowseProp(ICohort cohort)
+        {
+                return 0;
+        }
+        //---------------------------------------------------------------------
     }
 }
