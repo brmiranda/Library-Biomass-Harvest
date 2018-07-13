@@ -1,34 +1,49 @@
-<Project Sdk="Microsoft.NET.Sdk">  
+﻿<Project Sdk="Microsoft.NET.Sdk">  
 
   <PropertyGroup>
     <RootNamespace>Landis.Library.BiomassHarvest</RootNamespace>
-    <AssemblyName>Landis.Library.BiomassHarvest-v2.0.1</AssemblyName>
-    <AssemblyTitle>Biomass Harvest Library</AssemblyTitle>
-    <AssemblyVersion>2.0.1</AssemblyVersion>
+    <AssemblyName>Landis.Library.BiomassHarvest-v3</AssemblyName>
+    <AssemblyTitle>Landis.Library.BiomassHarvest-v3</AssemblyTitle>
+    <AssemblyCompany>LANDIS-II Foundation</AssemblyCompany>
+    <AssemblyProduct>Landis.Library.BiomassHarvest-v3</AssemblyProduct>    
+    <AssemblyVersion>3.0</AssemblyVersion>
     <AssemblyDescription>Harvest Library for LANDIS-II</AssemblyDescription>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Company>LANDIS-II Foundation</Company>
-    <Copyright>LANDIS-II Foundation</Copyright>
-    <Authors>LANDIS-II Foundation</Authors>
-    <Product>Library Biomass Harvest</Product>
-    <Description>Library-Biomass-Harvest is a support library for Extension Biomass Harvest.
-Extension Biomass Harvest is found at: (https://github.com/LANDIS-II-Foundation/Extension-Biomass-Harvest)</Description>
-    <PackageProjectUrl>https://sites.google.com/site/landismodel/home</PackageProjectUrl>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/LANDIS-II-Foundation/Library-Biomass-Harvest</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>LANDIS-II;Landis;Library;Biomass harvest</PackageTags>
+    <PackageLicenseUrl>https://github.com/LANDIS-II-Foundation/Library-Biomass-Harvest/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>http://www.landis-ii.org</PackageProjectUrl>
     <NeutralLanguage>English</NeutralLanguage>
+    <Authors>LANDIS-II Foundation</Authors>    
+    <Product>Library Biomass Harvest</Product>    
+    <Copyright>LANDIS-II Foundation</Copyright>
+    <Version>3.0</Version>
+    <PackageTags>LANDIS-II;Landis;Library;Biomass harvest</PackageTags>
+    <Description>Library-Biomass-Harvest is a support library for Extension Biomass Harvest.
+Extension Biomass Harvest is found at: (https://github.com/LANDIS-II-Foundation/Extension-Biomass-Harvest)</Description>
+    <PackageReleaseNotes>.NET Standard 2.0 update.</PackageReleaseNotes>
+    <FileVersion>7.0</FileVersion>
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="Landis.Library.AgeOnlyCohorts" Version="1.0.0" />
-    <PackageReference Include="Landis.Library.BiomassCohorts-v2" Version="1.0.0" />
-    <PackageReference Include="Landis.Library.Cohorts" Version="1.0.0" />
-    <PackageReference Include="Landis.Library.SiteHarvest-v1" Version="1.0.0" />
-    <PackageReference Include="Landis.SpatialModeling" Version="1.0.0" />
-    <PackageReference Include="Landis.Utilities" Version="1.0.0" />
-    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="Landis.Core" Version="2.0.0" />
   </ItemGroup>
   
+  <ItemGroup>
+    <Reference Include="Landis.Library.AgeOnlyCohorts-v3">
+      <HintPath>lib\Landis.Library.AgeOnlyCohorts-v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Landis.Library.BiomassCohorts-v3">
+      <HintPath>lib\Landis.Library.BiomassCohorts-v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Landis.Library.Cohorts-v2">
+      <HintPath>lib\Landis.Library.Cohorts-v2.dll</HintPath>
+    </Reference>
+    <Reference Include="Landis.Library.SiteHarvest-v2">
+      <HintPath>lib\Landis.Library.SiteHarvest-v2.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  
+
 </Project>
