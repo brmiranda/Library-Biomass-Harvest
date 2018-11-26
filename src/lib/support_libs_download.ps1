@@ -9,7 +9,7 @@ $master = "https://github.com/LANDIS-II-Foundation/Support-Library-Dlls-v7/raw/m
 $dlls = "Landis.Library.AgeOnlyCohorts-v3.dll",
 "Landis.Library.Cohorts-v2.dll",
 "Landis.Library.SiteHarvest-v2.dll",
-"Landis.Library.BiomassChohorts-v2.dll"
+"Landis.Library.BiomassCohorts-v3.dll"
 #************************************************
 
 
