@@ -26,9 +26,12 @@ namespace Landis.Library.BiomassHarvest
             if (PartialThinning.CohortSelectors.Count == 0)
                 cohortCutter = new WholeCohortCutter(cohortSelector, extensionType);
             else
+            {
                 cohortCutter = new PartialCohortCutter(cohortSelector,
                                                        PartialThinning.CohortSelectors,
                                                        extensionType);
+                PartialThinning.ClearCohortSelectors();
+            }
             return cohortCutter;
         }
 
@@ -48,9 +51,12 @@ namespace Landis.Library.BiomassHarvest
             if (PartialThinning.AdditionalCohortSelectors.Count == 0)
                 cohortCutter = new WholeCohortCutter(cohortSelector, extensionType);
             else
+            {
                 cohortCutter = new PartialCohortCutter(cohortSelector,
                                                        PartialThinning.AdditionalCohortSelectors,
                                                        extensionType);
+                PartialThinning.ClearCohortSelectors();
+            }
             return cohortCutter;
         }
     }
