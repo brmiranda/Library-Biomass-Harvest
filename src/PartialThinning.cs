@@ -242,5 +242,24 @@ namespace Landis.Library.BiomassHarvest
                 return true;
             }
         }
+
+        /// <summary>
+        /// Resets the cohort selectors for another prescription
+        /// </summary>
+        public static void ClearCohortSelectors()
+        {
+            if (CohortSelectors != null)
+            {
+                CohortSelectors.Clear();
+            }
+            if (AdditionalCohortSelectors != null)
+            {
+                AdditionalCohortSelectors.Clear();
+            }
+            if (percentages != null)
+            {
+                percentages.Clear();
+            }
+        }
     }
 }
