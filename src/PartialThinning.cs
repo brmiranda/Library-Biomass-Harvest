@@ -106,9 +106,9 @@ namespace Landis.Library.BiomassHarvest
                 throw MakeInputValueException(valueAsStr.ToString(),
                                               exc.Message);
             }
-            if (percentage.Value < 0.0 || percentage.Value > 0.99)
+            if (percentage.Value < 0.0 || percentage.Value > 1)
                 throw MakeInputValueException(valueAsStr.ToString(),
-                                              string.Format("{0} is not between 0% and 99%.  100% is indicated by omitting the parentheses and percentage.", word));
+                                              string.Format("{0} is not between 0% and 100%.", word));
 
             //  Read whitespace and ')'
             valueAsStr.Append(ReadWhitespace(reader));
@@ -187,7 +187,11 @@ namespace Landis.Library.BiomassHarvest
             if (reader.Peek() == '(') {
                 int ignore;
                 InputValue<Percentage> percentage = ReadPercentage(reader, out ignore);
-                percentages[ageRange.Start] = percentage;
+
+                if (percentage.String != "(100%)")
+                {
+                    percentages[ageRange.Start] = percentage;
+                }
             }
 
             return new InputValue<AgeRange>(ageRange, word);
